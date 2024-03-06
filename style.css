@@ -241,6 +241,17 @@ nav h1{
   scale: 0.95;
 }
 
+.closeanimation {
+  animation: close 0.5s forwards;
+}
+
+/*=======Animations===================*/
+@keyframes close {
+  from {opacity: 1;}
+  to {opacity: 0; display: none;}
+}
+
+
 /*=======Media Querys===================*/
 @media screen and  (max-width: 768px) {
   .lib-form {

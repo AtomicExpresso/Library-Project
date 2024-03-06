@@ -170,6 +170,8 @@ addBtn.addEventListener('click', function () {
 //======User Input======
 //Opens up book input form
 bookBtn.addEventListener('click', function () {
+  bookForm.classList.remove('closeanimation');
+  formBackground.classList.remove('closeanimation');
   bookForm.style.display = 'flex';
   formBackground.style.display = 'flex';
   clearInputFields();
@@ -182,8 +184,8 @@ clearBtn.addEventListener('click', function () {
 
 //Closes the input form
 exitBtn.addEventListener('click', function () {
-  bookForm.style.display = 'none';
-  formBackground.style.display = 'none';
+  bookForm.classList.add('closeanimation');
+  formBackground.classList.add('closeanimation');
   clearInputFields();
 });
 
@@ -234,19 +236,19 @@ document.addEventListener('click', function (event) {
     let parentDiv = clickedDeleteBtn.parentNode;
     let deletethis = parentDiv.querySelector('.bookcontent');
 
-    let indexToRemove = parseInt(parentDiv.dataset.index); 
+    let indexToRemove = parseInt(parentDiv.dataset.index);
 
     if (indexToRemove !== -1) {
       bookInventory -= 1;
       parentDiv.style.display = 'none';
-      
+
       // Remove the element from the array
       myLibary.splice(indexToRemove, 1);
-      
+
       // Call the function to update the display
       displayShelf();
-      console.log('hi')
-      console.log(myLibary)
+      console.log('hi');
+      console.log(myLibary);
     }
   }
 });
@@ -255,14 +257,16 @@ document.addEventListener('click', function (event) {
 darkTheme.addEventListener('click', function () {
   darkThemeStatus++;
 
-  if (darkThemeStatus % 2 === 0) { //Dark mode
+  if (darkThemeStatus % 2 === 0) {
+    //Dark mode
     document.body.style.backgroundColor = '#202123';
     document.getElementById('nav').style.backgroundColor = '#323639';
     document.getElementById('fil-bar').style.backgroundColor = '#484d53';
     document.getElementById('bookbtn').style.backgroundColor = '#2c2c2c';
     document.getElementById('clearallbtn').style.backgroundColor = '#2c2c2c';
     document.getElementById('darktheme').style.backgroundColor = '#2c2c2c';
-  } else { //light mode
+  } else {
+    //light mode
     darkbtnstatus = 0;
     document.body.style.backgroundColor = 'white';
     document.getElementById('nav').style.backgroundColor = '#004333';
