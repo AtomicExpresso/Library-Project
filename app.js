@@ -14,6 +14,7 @@ const titleText = document.getElementById('title-text');
 const readBtnStatus = document.getElementById('readbtn');
 const darkTheme = document.getElementById('darktheme'); //Dark-mode
 let listStat = document.getElementsByClassName('liststat');
+const formBackground = document.getElementById('form-back');
 
 //Used for form input error detection
 const titleError = document.getElementById('titleerror');
@@ -170,6 +171,7 @@ addBtn.addEventListener('click', function () {
 //Opens up book input form
 bookBtn.addEventListener('click', function () {
   bookForm.style.display = 'flex';
+  formBackground.style.display = 'flex';
   clearInputFields();
 });
 
@@ -181,6 +183,7 @@ clearBtn.addEventListener('click', function () {
 //Closes the input form
 exitBtn.addEventListener('click', function () {
   bookForm.style.display = 'none';
+  formBackground.style.display = 'none';
   clearInputFields();
 });
 

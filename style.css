@@ -85,6 +85,7 @@ nav h1{
 }
 
 /*=======Libary book form===================*/
+
 .lib-form{
   display: flex;
   position: absolute;
@@ -97,7 +98,6 @@ nav h1{
   padding: 20px;
   border-radius: 10px;
   border: solid 5px hsla(0, 0%, 77%, 0.425);
-  backdrop-filter: blur(100vw);
   z-index: 100;
 }
 
@@ -130,9 +130,13 @@ nav h1{
 }
 
 .form-filed{
-  backdrop-filter: blur(100vw);
-  background-color: hsla(0, 0%, 12%, 0.763);
-  z-index: 99;
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  z-index: 9;
 }
 
 .lib-form p{
@@ -186,6 +190,7 @@ nav h1{
   padding: 10px;
   background: #efefef;
   z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .filter-bar button:nth-child(1){
