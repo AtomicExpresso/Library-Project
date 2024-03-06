@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP Libary Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="form-filed" >
+      <form action="" id="lib-form" class="lib-form">
+        <h2 id="title-text">Add books</h2>
+        <label for="title">Book title</label>
+        <input type="text" id="title" placeholder="Title" required maxlength="6">
+        <p id="titleerror"></p>
+        <label for="author">Author</label>
+        <input type="text" id="author" placeholder="Author" required maxlength="10">
+        <p id="authorerror"></p>
+        <label for="pages">Pages</label>
+        <input type="number" id="pages" placeholder="Pages" required>
+        <p id="pageserror"></p>
+        <label for="read">Status</label>
+        <select name="read" id="read" required>
+          <option value="">Did you read it?</option>
+          <option value="read">I read the book</option>
+          <option value="haven't read">I havent read it</option>
+        </select>
+        <p id="statuserror"></p>
+        <div class="btn-row">
+          <button id="addbtn" type="button">Add book</button>
+          <button id="clearbtn" type="button">Clear</button>
+          <button id="exitbtn" type="button">Exit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section>
+    <nav id="nav">
+      <h1>My library</h1>
+    </nav>
+  </section>
+  <section>
+    <div class="filter-bar" id="fil-bar">
+      <button id="bookbtn">Add book</button>
+      <button id="clearallbtn">Clear libary</button>
+      <button id="darktheme">Theme</button>
+    </div>
+  </section>
+  <section>
+    <div class="shelf" id="shelf">
+
+    </div>
+  </section>
+</body>
+<script src="app.js"></script>
+</html>

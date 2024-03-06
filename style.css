@@ -1,0 +1,256 @@
+/*=======Initial setup===================*/
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+nav{
+  font-size: 30px;
+  background-color: #004333;
+  padding: 1px;
+  color: white;
+}
+
+nav h1{
+  margin-left: 10px;
+}
+
+/*=======Book content===================*/
+.bookcontent{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./images/cover.jpg);
+  background-size: cover;
+  color: white;
+  padding: 40px 25px 70px;
+  border-radius: 10px;
+  line-height: 0;
+  gap: 0px;
+  filter: drop-shadow(10px 10px 5px hsla(0, 0%, 0%, 0.461));
+  z-index: 0;
+}
+
+.bookcontent h1{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/*=======Shelf===================*/
+
+.readbtn{
+  margin-top: 10px;
+  background-color: rgb(0, 183, 0);
+  color: white;
+  border: solid 3px hsla(120, 100%, 25%, 0.669);
+  padding: 5px;
+  transition: 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.readbtn:hover{
+  background-color: rgb(1, 134, 1);
+  scale: 0.96;
+  z-index: 2;
+}
+
+.deletebtn{
+  margin-top: 10px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: solid 3px hsla(0, 100%, 24%, 0.669);
+  padding: 5px;
+  transition: 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.deletebtn:hover{
+  background-color: rgb(186, 0, 0);
+  scale: 0.96;
+  z-index: 2;
+}
+
+.shelf{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/*=======Libary book form===================*/
+.lib-form{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 5vh;
+  left: 30vw;
+  right: 30vw;
+  gap: 10px;
+  background-color: hsla(0, 0%, 83%, 0.822);
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 5px hsla(0, 0%, 77%, 0.425);
+  backdrop-filter: blur(100vw);
+  z-index: 100;
+}
+
+.lib-form input{
+  outline: none;
+  border: solid 2px hsla(0, 0%, 77%, 0.425);
+  border-radius: 3px;
+}
+
+.lib-form input:focus{
+  outline:none;
+  border: solid 2px hsl(129, 100%, 24%);
+  border-radius: 3px;
+}
+
+.lib-form select{
+  outline: none;
+  border: solid 2px hsla(0, 0%, 77%, 0.425);
+  border-radius: 3px;
+}
+
+.lib-form select:focus{
+  outline:none;
+  border: solid 2px hsl(129, 100%, 24%);
+  border-radius: 3px;
+}
+
+.lib-form h2{
+  text-align: center;
+}
+
+.form-filed{
+  backdrop-filter: blur(100vw);
+  background-color: hsla(0, 0%, 12%, 0.763);
+  z-index: 99;
+}
+
+.lib-form p{
+  font-size: 12px;
+  text-align: left;
+  margin: auto;
+}
+
+.btn-row{
+  margin: auto;
+}
+
+.btn-row button:nth-child(1){
+  background-color: rgb(0, 119, 255);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-row button:nth-child(2){
+  background-color: rgb(0, 138, 9);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-row button:nth-child(3){
+  background-color: rgb(138, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-row button:hover{
+  scale: 0.96;
+}
+
+/*=======Filter bar===================*/
+.filter-bar{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background: #efefef;
+  z-index: 5;
+}
+
+.filter-bar button:nth-child(1){
+  margin-left: auto;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.filter-bar button:nth-child(2){
+  margin-left: 10px;
+  background-color: #00a10b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.filter-bar button:nth-child(3){
+  margin-left: 10px;
+  background-color: #ff8000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.filter-bar button:nth-child(1):hover{
+  background-color: rgb(0, 104, 224);
+  scale: 0.95;
+}
+
+.filter-bar button:nth-child(2):hover{
+  background-color:  rgb(0, 110, 7);
+  scale: 0.95;
+}
+
+.filter-bar button:nth-child(3):hover{
+  background-color:  rgb(220, 111, 2);
+  scale: 0.95;
+}
+
+/*=======Media Querys===================*/
+@media screen and  (max-width: 768px) {
+  .lib-form {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 5vh;
+    left: 10vw;
+    right: 10vw;
+    gap: 10px;
+    background-color: hsla(0, 0%, 83%, 0.822);
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 4px hsla(0, 0%, 77%, 0.425);
+    backdrop-filter: blur(100vw);
+    z-index: 100;
+  }
+}
